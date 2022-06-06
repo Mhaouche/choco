@@ -5,13 +5,9 @@
 ## Makefile
 ##
 
-NAME_GEN	= 	generator/generator
+NAME_GEN	= 	generator
 
-SRCS_GEN	= 	src/generator/main.c\
-		  		src/generator/print_map.c\
-		  		src/generator/parfait.c\
-		  		src/generator/imparfait.c\
-		  		src/generator/build.c\
+SRCS_GEN	= 	main.c\
 
 OBJS_GEN	= $(SRCS_GEN:.c=.o)
 
@@ -24,7 +20,6 @@ CFLAGS		= -Wall -Wextra -Iinclude
 all:	$(NAME_GEN)
 
 $(NAME_GEN): $(OBJS_GEN)
-	mkdir -p generator
 	$(CC) -o $(NAME_GEN) $(OBJS_GEN) $(CFLAGS)
 
 clean:
