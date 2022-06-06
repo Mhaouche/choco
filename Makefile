@@ -31,7 +31,7 @@ fclean:		clean
 
 re:		fclean all
 
-test run:
+tests_run:
 	echo "salut"
 
 .PHONY:		all clean fclean re
